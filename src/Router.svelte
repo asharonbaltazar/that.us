@@ -56,6 +56,9 @@
   import OrderTest from './routes/orders/Test.svelte';
   import OrderSuccess from './routes/orders/Success.svelte';
   import OrderCancel from './routes/orders/Cancel.svelte';
+
+  // membership pricing
+  import Pricing from './routes/membership/Pricing.svelte';
 </script>
 
 <Router>
@@ -169,6 +172,8 @@
     condition="{isLoggedIn}"
     redirect="/login"
   />
+
+  <Route exact path="/membership/pricing" component="{Pricing}" />
 
   <Route exact path="/not-found" component="{NotFound}" />
 

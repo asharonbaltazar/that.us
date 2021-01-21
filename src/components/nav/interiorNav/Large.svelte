@@ -4,7 +4,7 @@
   import Icon from 'svelte-awesome';
   import { plus } from 'svelte-awesome/icons';
 
-  import { Activity } from '../../../elements/svgs';
+  import { Activity, Cart } from '../../../elements/svgs';
   import ActivitySlideOver from '../../activityCenter/ActivitySlideOver.svelte';
   import DesktopLink from './_DesktopLink.svelte';
   import UserProfile from '../_UserProfile.svelte';
@@ -136,7 +136,7 @@
     {#if $hasNotifications}
       <button
         class="max-w-xs h-10 w-10 rounded-full text-white focus:outline-none
-          duration-150 ease-in-out hover:bg-thatBlue-500"
+    duration-150 ease-in-out hover:bg-thatBlue-500"
         class:shadow-solid="{activityVisible}"
         class:bg-thatBlue-500="{activityVisible}"
         aria-label="Notifications"
@@ -153,6 +153,14 @@
           on:clicked-outside="{handleCloseActivityCenter}"
         />
       {/if}
+    {/if}
+
+    {#if true}
+      <div class="ml-4 p-1 rounded-full text-white hover:bg-thatBlue-500">
+        <Link href="/orders/summary">
+          <Cart />
+        </Link>
+      </div>
     {/if}
 
     <div class="ml-4 p-1 rounded-full text-white hover:bg-thatBlue-500">
